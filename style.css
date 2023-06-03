@@ -1,0 +1,235 @@
+* {
+  /* every signle elements will get effected on the page and no inheretence involved*/
+  /* border-top: #1098ad solid 10px; */
+  margin: 0; /* to make all the margin and padding to 0 */
+  padding: 0;
+}
+/* PAGE SECTION */
+body {
+  font-family: sans-serif;
+  color: #444;
+  border-top: #1098ad solid 10px;
+  position: relative; /*the parent position must be relative inorder to set the abosolute postion to bottom for the like button to keep the button in fixed postion*/
+}
+.container {
+  /*to make content ot all center*/
+  width: 700px;
+  /*margin-left: auto;
+  margin-right: auto; they are automatically calculated by browser and rule was left and right must same so that they will appear as center of the page*/
+  margin: 0 auto; /*short cut top and bottom was o and left and right was auto so that it is easy to use ratther giving both as above */
+}
+.main-header {
+  background-color: #f7f7f7f7;
+  /* padding: 20px;
+  padding-left: 100px; */
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  height: 80px;
+}
+nav {
+  font-size: 20px;
+  text-align: center;
+}
+
+article {
+  margin-bottom: 60px;
+}
+/* h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: sans-serif;
+  color: #444;
+} */
+/* SMALLER ELEMENTS */
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+h1 {
+  font-size: 26px;
+
+  text-transform: uppercase;
+  font-style: italic;
+}
+h2 {
+  font-size: 35px;
+  margin-bottom: 30px;
+  position: relative;
+  /* background-color: orangered; */
+}
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+h4 {
+  font-size: 20px;
+  text-transform: uppercase; /* to convert into upper case */
+  text-align: center;
+}
+p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+h1::first-letter {
+  /*to selelct the first element in the heading in H1 in book icon in header */
+  /*pseudo elements*/
+  font-style: normal;
+  margin-right: 5px;
+}
+/* h3 + p::first-line {
+  adjacent siblings
+  color: red; }*/
+h2::after {
+  /*WE CAN WRITE THE CONTENT ALSO HERE BY USING THE CONTENT AFTER SELECTS THE AFTER THE h2 ELEMENT*/
+  content: "TOP";
+  background-color: #ffe70e;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -15px;
+  right: -25px;
+  color: #444;
+}
+ul,
+ol {
+  margin-left: 50px; /* to make visible of the numbers and discs because of marging 0 on universal selector they were hidided inorder to get back they have given this*/
+  margin-bottom: 20px;
+}
+li {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+li:last-child {
+  margin-bottom: 0;
+}
+/* footer p {
+  it is for copyright but it was not wise to use this so we have added id as <p id="Copyright"> check below copyright
+  font-size: 16px;
+} */
+
+/* article header p {
+  /* combining more html elemetns ex: see Posted by Laura Jones on Monday, June 21st 2027 
+  font-style: italic; 
+} */
+#author {
+  /* specified using id attribute*/
+  /* by using id as author in <p id="author">  above was not wise so we added this and commented that*/
+  font-style: italic;
+  font-size: 18px;
+}
+#Copyright {
+  /* specified using id attribute*/
+  font-size: 16px;
+}
+.related-author {
+  /* specified using class attribute because the id is only used once but class can be used many times*/
+  font-size: 18px;
+  font-weight: bold;
+}
+.related {
+  list-style: none; /* removing list dots in the related posts unordered lists*/
+}
+.post-header {
+  margin-bottom: 40px;
+}
+aside {
+  background-color: #f7f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  /* padding-top: 50px;
+  padding-bottom: 50px;  writing in a better way*/
+  padding: 50px 0;
+  width: 500px; /* to make the box in related posts smaller we will give this*/
+}
+/* .first-li {
+  font-weight: bold;
+} */
+
+li:first-child {
+  font-weight: bold;
+}
+li:last-child {
+  font-style: italic;
+}
+/* li:nth-child(2) {
+  /* color: red; 
+} */
+/* article p:first-child { /* misconception of pusdoclasses that wont work
+  color: red;
+} */
+
+/* styling links */
+/* need to be exact order like LVHA for links*/
+a:link {
+  /* with a:link it only selects a links with href but for now it was not working so i have kept below*/
+  color: #1098ad;
+}
+a {
+  color: #1098ad;
+  text-decoration: none; /* to remove the underlines in links */
+}
+a:visited {
+  color: #1098ad; /*suppose if we visit a link it changes to different color*/
+}
+a:hover {
+  /* when we move our mouse to the specific link it apperas on orangered color and font will be bold and will have underline with color pink*/
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline pink; /* to mention the it as underline using it and also color type of underline like dotted*/
+}
+
+a:active {
+  /* when we click the link the it will appears like black */
+  background: black;
+  font-style: italic;
+}
+/* resolving conflicts To check in footer in html page*/
+/* #Copyright {
+  /* first prority point mouse on the Copyright an you can see Selector Specificity: (1, 0, 0) 
+  color: red;
+}
+.Copyright {
+  /* second prority for class*/
+/* color: blue;
+} */
+/* .text {
+  /* second prority and last class will be applied for class
+  color: yellow;
+} */
+/* footer p {
+  /* last prority
+  color: green !important; /* if we give important then it will be the highest priority but it was not used not a best practice 
+} */
+/* nav a:link {
+  font-size: 18px;
+} */
+.post-image {
+  width: 100%; /*this apdats when we minize or maximize screens*/
+  height: auto; /*if we set dimesions in html tag we can use auto otherwise mention it */
+}
+nav a:link {
+  margin-right: 30px;
+  margin-top: 10px; /* it does not applies to top and bottom because it was inline elements*/
+  display: inline-block; /*to make the above code for inline blocks we need to give it as inline-block elements in display so that we can give top and bottom for both margin and paddings else it only works for left and right only for both*/
+}
+nav a:link:last-child {
+  margin-right: 0;
+}
+button {
+  padding: 20px;
+  font-size: 22px;
+  cursor: pointer; /*to make cursor to hand when we go there*/
+  position: absolute; /*by using th absolute we can put the wherever we want it to be on the page we will use this for small elements like buttons not for complex things we will use layouts.*/
+  /* top: 50px;
+  left: 50px; */
+  bottom: 50px;
+  right: 50px;
+}

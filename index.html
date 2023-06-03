@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--To tell the browser that it is a html document-->
+<html lang="en">
+  <!--to tell the browser that it is using the english-->
+
+  <head>
+    <meta charset="UTF-8" />
+    <!--To tell about the some data in the head for mentioning character set-->
+    <title>The basic language of the web: HTML</title>
+    <link href="style.css" rel="stylesheet" />
+    <!--To link the external css file to html page and tell the browser that it is a stylesheet using rel-->
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="main-header">
+        <!--to mention it is heading in body element but does not to anything-->
+        <h1>📘 The Code Magazine [DEMO]</h1>
+        <nav>
+          <!--to group all the links in a box-->
+          <a href="blog.html" target="_blank">Blog</a>
+          <a href="challenges.html" target="_blank">Challanges</a>
+          <a href="flexbox.html" target="_blank">Flexbox</a>
+          <a href="cssgrid.html" target="_blank">CSS Grid</a>
+        </nav>
+      </header>
+      <article>
+        <!--to mention it is as written blog post article like data in body element but does not to anything-->
+        <header class="post-header">
+          <p id="author">
+            Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
+          </p>
+          <img
+            src="img/laura-jones.jpg"
+            alt="HTML code on a screen"
+            width="100px"
+            height="100px"
+          />
+          <h2>The Basic Language of the Web: HTML</h2>
+          <img
+            src="img/post-img.jpg"
+            alt="Picture of code"
+            height="300px"
+            width="500px"
+            class="post-image"
+          />
+        </header>
+        <p>
+          All modern websites and web applications are built using three
+          <em>fundamental</em> technologies: HTML, CSS and JavaScript. These are
+          the
+          <!-- instead of <i> for italic we use <em> for semantic html -->
+          languages of the web.
+        </p>
+
+        <p>
+          In this post, let's focus on HTML. We will learn what HTML is all
+          about, and why you too should learn it.
+        </p>
+
+        <h3>What is HTML?</h3>
+        <p>
+          HTML stands for <strong>H</strong>yper<strong>T</strong>ext
+          <!-- instead of <b> for bold we use <strong> -->
+          <strong>M</strong>arkup <strong>L</strong>anguage. It's a markup
+          language that web developers use to structure and describe the content
+          of a webpage (not a programming language).
+        </p>
+        <p>
+          HTML consists of elements that describe different types of content:
+          paragraphs, links, headings, images, video, etc. Web browsers
+          understand HTML and render HTML code as websites.
+        </p>
+        <p>In HTML, each element is made up of 3 parts:</p>
+        <ol>
+          <li class="first-li">The opening tag</li>
+          <li>The closing tag</li>
+          <li>The actual element</li>
+          <li>
+            You can learn more at the
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+              target="_blank"
+              >MDN Web Docs.</a
+            >
+          </li>
+        </ol>
+        <h3>Why should you learn HTML?</h3>
+
+        <ul>
+          <li class="first-li">
+            To be able to use the fundamental web dev language
+          </li>
+          <li>To build web applications</li>
+          <li>To impress friends</li>
+          <li>To have fun 😃</li>
+        </ul>
+        <p>Hopefully you learned something new here. See you next time!</p>
+      </article>
+      <aside>
+        <!-- can be used to mention the aside like remaining other imformation we use this but it does not do anything anything on webpage but make it more semantic we use this -->
+        <h4>Related Posts</h4>
+        <ul class="related">
+          <li>
+            <img
+              src="img/related-1.jpg"
+              alt="Picture of the related post image 1"
+              width="75"
+              ,
+              height="75"
+            /><a href="#">How to Learn Web Development</a>
+            <p class="related-author">By Jonas Schmedmann</p>
+          </li>
+          <li>
+            <img
+              src="img/related-2.jpg"
+              alt="Picture of the related post image 2"
+              width="75"
+              ,
+              height="75"
+            /><a href="#">The Unknown Powers of CSS</a>
+            <p class="related-author">By Jim Dillon</p>
+          </li>
+          <li>
+            <img
+              src="img/related-3.jpg"
+              alt="Picture of the related post image 3"
+              width="75"
+              ,
+              height="75"
+            /><a href="#">Why JavaScript is Awesome</a>
+            <p class="related-author">By Malitada</p>
+          </li>
+        </ul>
+      </aside>
+      <footer>
+        <!-- To give footer for the webpage-->
+        <p id="Copyright" class="Copyright text">
+          Copyright &copy;2027 by The Code Magazine.
+        </p>
+      </footer>
+    </div>
+    <button>❤️LIKE</button>
+  </body>
+</html>
